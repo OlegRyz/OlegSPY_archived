@@ -2,7 +2,7 @@
 
   "package": {
     "name": "bintray-olegryz-OlegSPY",
-    "repo": "maven",
+    "repo": "OlegSPY",
     "subject": "olegryz"
   },
 
@@ -13,7 +13,7 @@
 
   "files":
   [
-    {"includePattern": "build/(.*)", "excludePattern": "build/.*.zip$", "uploadPattern": "/$1"}
+    {"includePattern": "build\/(.*)\.jar", "excludePattern": "build/.*.zip$", "uploadPattern": "/$1"}
   ],
   "publish": true
 }
