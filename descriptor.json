@@ -1,0 +1,19 @@
+{
+
+  "package": {
+    "name": "bintray-olegryz-OlegSPY",
+    "repo": "maven",
+    "subject": "olegryz"
+  },
+
+  "version": {
+    "name": "v0.1"
+  },
+
+
+  "files":
+  [
+    {"includePattern": "build/(.*)", "excludePattern": "build/.*.zip$", "uploadPattern": "/$1"}
+  ],
+  "publish": true
+}
