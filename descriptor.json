@@ -13,7 +13,7 @@
 
   "files":
   [
-    {"includePattern": "build\/(.*)\.jar", "excludePattern": "build/.*.zip$", "uploadPattern": "/$1"}
+    {"includePattern": "build\/libs\/(.*\.jar)", "excludePattern": "build/.*.zip$", "uploadPattern": "/$1"}
   ],
   "publish": true
 }
