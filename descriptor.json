@@ -21,7 +21,7 @@
 
   "files":
   [
-    {"includePattern": "build/libs/(.*)", "uploadPattern": "org/niksi/olegspy/0.0.1/$1"}
+    {"includePattern": "build/libs/(.*)", "uploadPattern": "org/niksi/olegspy/OlegSPY/0.0.1/$1"}
   ],
 
   "publish": true
