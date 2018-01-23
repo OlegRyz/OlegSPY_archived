@@ -1,4 +1,6 @@
 language: java
+before_deploy:
+  - ./gradlew generatePomFileForMavenPublication
 deploy:
   provider: bintray
   file: "descriptor.json"
