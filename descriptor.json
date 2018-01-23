@@ -1,19 +1,28 @@
 {
-
   "package": {
     "name": "org.niksi.olegspy",
-    "repo": "OlegSPY",
-    "subject": "olegryz"
+    "repo": "niksi",
+    "subject": "olegryz",
+    "desc": "Debug logs helper for development purposes",
+    "website_url": "https://github.com/OlegRyz/OlegSPY",
+    "issue_tracker_url": "https://github.com/OlegRyz/OlegSPY/issues",
+    "vcs_url": "https://github.com/OlegRyz/OlegSPY.git",
+    "licenses": ["MIT"],
+    "labels": ["kotlin", "bintray", "gradle", "olegspy", "java"],
+    "public_download_numbers": true,
+    "public_stats": true
   },
 
   "version": {
-    "name": "v0.1"
+    "name": "0.0.1",
+    "released": "2018-01-23",
+    "gpgSign": false
   },
-
 
   "files":
   [
-    {"includePattern": "build\/libs\/(.*\.jar)", "excludePattern": "build/.*.zip$", "uploadPattern": "/$1"}
+    {"includePattern": "build/libs/(.*)", "uploadPattern": "org/niksi/olegspy/0.0.1/$1"}
   ],
+
   "publish": true
 }

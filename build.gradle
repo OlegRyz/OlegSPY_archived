@@ -1,4 +1,34 @@
 apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+
+group 'org.niksi.olegspy'
+version '0.0.1'
+
+publishing {
+    publications {
+        niksi(MavenPublication) {
+            from components.java
+            pom.withXml {
+                asNode().dependencies.'*'.findAll() {
+                    it.scope.text() == 'runtime' && project.configurations.compile.allDependencies.find { dep ->
+                        dep.name == it.artifactId.text()
+                    }
+                }.each() {
+                    it.scope*.value = 'compile'
+                }
+            }
+        }
+    }
+}
+
+
+
+model {
+    tasks.generatePomFileForNiksiPublication {
+        destination = file("${buildDir}/libs/OlegSPY-${version}.pom")
+    }
+}
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
