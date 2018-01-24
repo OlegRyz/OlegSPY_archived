@@ -6,3 +6,5 @@ deploy:
   file: "descriptor.json"
   user: "olegryz"
   key: $bintray_key
+  on:
+    branch: master
